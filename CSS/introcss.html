@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- inline css, it will repeat the code again n again... to solve this use internal css -->
+    <!-- <h2 style="color: rgb(30, 208, 208); font-size: 28px;">Hello everyone</h2>
+    <h2 style="color: rgb(30, 208, 208); font-size: 28px;">Welcome to CSS tutorial</h2> -->
+
+
+    <!-- Internal css -->
+    <h2 id="h21">Welcome to CSS tutorial</h2>
+    <h2 id="h22">Hello everyone</h2>
+
+    <h2 class="red">Welcome back</h2>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis error quibusdam atque repudiandae neque earum voluptatem, excepturi odit nemo, perferendis itaque accusamus, suscipit obcaecati voluptatibus deleniti cum eum. Delectus, ab.
+    </p>
+    <style>
+        /* element selector */
+        /* h2 {
+            color: rgb(30, 208, 208);
+            font-size: 28px;
+        } */
+
+         /* id selector */
+        /* #h21 {
+            color: rgb(30, 208, 208);
+            font-size: 28px;
+        } */
+
+        /* group selector */
+        #h21, #h22 {
+            color: rgb(30, 208, 208);
+            font-size: 28px;
+        }
+
+        /* class selector */
+        .red {
+            color: rgb(147, 68, 148);
+            font-size: 28px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        /* universal selector */
+        * {
+            
+            box-sizing: border-box;
+            color: brown;
+        }
+
+
+    </style>
+</body>
+</html>

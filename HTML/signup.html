@@ -10,29 +10,47 @@
     <form>
     <h1>Registration Form</h1>
     <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <label for="username"></label>
+        <input type="text" id="username" name="username" placeholder="Enter your name">
         <br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <label for="email"></label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" class="blue">
         <br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="password"></label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
         <br><br>
 
-        <label for="confirm_password">Confirm Password:</label>
-        <input type="password" id="confirm_password" name="confirm_password" required>
+        <label for="confirm_password"></label>
+        <input type="password" id="password" name="confirm_password" placeholder="Confirm your password" required>
         <br><br>
         <input type="checkbox" name="" id="">
         <label> I accept all terms and condition.</label>
         <br><br>
 
-        <input type="submit" value="Register now">
+        <input type="submit" value="Register now" class="blue">
       
         <p>Already have an account? <a href="login.html">Login here</a></p>
 
     </form>
+
+    <style>
+        /* internal css */
+        #username {
+            font-size: 20px;
+            background-color: rgb(62, 171, 144);
+        }
+
+        .blue {
+            background-color: rgb(51, 121, 213);
+            font-size: 18px;
+            color: white;
+        }
+
+        #password {
+            background-color: red;
+        }
+    </style>
 </body>
 </html>
