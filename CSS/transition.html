@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> -->
+    
+</head>
+<body>
+    <h1>Translate Example</h1>
+    <div class="box"></div>
+    <p>Hover the box to see the effect.<b>50px right</b> and <b></b>30px down</b></p>
+
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .box{
+            width: 150px;
+            height: 150px;
+            margin: 50px auto;
+            background-color: darkcyan;
+            transition: transform 0.5s;
+            border: blue;
+        }
+        .box:hover{
+            /* transform: translateX(100px) translateY(50px); */
+            /* transform: rotate(90deg); */
+            /* transform: scale(1.4, 1.2); */
+            transform: skew(15deg, 10deg);
+        }
+    </style>
+</body>
+</html>
