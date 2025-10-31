@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Name: <input type="text" id="nameInput">
+
+    <input type="button" value="Greet" onclick="greetUser()">
+   
+
+    <!-- //output should be welcome <name></name> -- when i click on greet button with h1 getElementsByTagName -->
+   
+    <!-- //html code in js code  -->
+    <script>
+        function greetUser() {
+            let name = document.getElementById("nameInput").value;
+            let h1 = document.getElementsByTagName("h1")[0];
+            h1.innerText = "Welcome, " + name + "!";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Number 1:<input type="text" class="tb" id="num1">
+    <br>
+    <br>
+    Number 2:<input type="text" class="tb" id="num2">
+    <br>
+    <br>
+    <input type="button" value="Add" onclick="add_two()">
+    <input type="button" value="Clear" onclick="clear_fields()">
+    <br>
+    <br>
+    Result: <input type="text" class="tb" id="result" disabled>
+
+    <script>
+        // debugger;
+        function add_two()
+        {
+            obj_num1 = document.getElementById("num1");
+            data_num1 = parseInt(obj_num1.value);
+            obj_num2 = document.getElementById("num2");
+            data_num2 = parseInt(obj_num2.value);
+            // console.log(data_num1 + data_num2);
+            
+            obj_res = document.getElementById("result");
+            obj_res.value = data_num1 + data_num2;
+        }
+        // function clear_fields()
+        // {
+        //     document.getElementById("num1").value = "";
+        //     document.getElementById("num2").value = "";
+        //     document.getElementById("result").value = "";
+        // }
+
+        // by using tag name
+        let inputs = document.getElementsByClassName("tb");  //--- by using class name
+        // let inputs = document.getElementsByTagName("input");
+        for(let i=0; i<inputs.length; i++)
+        {
+            // if(inputs[i].type == "text")  ----if use class name don't need this condition
+            inputs[i].value = "";
+            inputs[i].style.backgroundColor = "lightblue";
+        }
+    </script>
+</body>
+</html>
