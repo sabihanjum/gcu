@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   First Name: <input type="text" id="firstName"> 
+   <br>
+   <br>
+   Last Name: <input type="text" id="lastName">
+   <br>
+   <br>
+   <input type="button" value="Click Here" onclick="submitForm()">
+   <br>
+   <br>
+    Result: <input type="text" class="tb" id="result" disabled>
+
+   <h1></h1>
+
+   <style>
+    input
+    {
+        background-color: lightgreen;
+        font-size: 25px;
+    }
+   </style>
+<!-- //output should be display in result box with last name reverse and first name -->
+    <script>
+
+        document.querySelector("input").style.backgroundColor = "lightblue";
+
+        // document.querySelectorAll("input").forEach(input => {
+        //     input.style.backgroundColor = "lightblue";
+        // });
+
+     function submitForm() {
+          let firstName = document.getElementById("firstName").value;
+          let lastName = document.getElementById("lastName").value;
+          
+          // Reverse the last name
+          let reversedLastName = lastName.split('').reverse().join('');
+          
+          // Combine first name and reversed last name
+          let result = reversedLastName  + " " + firstName;
+          
+          // Display the result in the result input box
+          document.getElementById("result").value = result;
+     }
+    </script>
+</body>
+</html>

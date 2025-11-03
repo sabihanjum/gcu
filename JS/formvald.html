@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        input { padding: 6px; }
+        input:invalid { outline: none; }
+    </style>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        Name:
+        <input type="text" id="name" name="name" required onkeyup="validateForm()" placeholder="First name">
+        <br><br>
+        email:
+        <input type="email" id="email" name="email" required onkeyup="validateForm()" placeholder="example@example.com">
+        <br><br>
+        Phone:
+        <input type="text" id="phno" name="phno" required onkeyup="validateForm()" maxlength="10" placeholder="10-digit mobile">
+        <br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm(){
+            // name: first char capital, length 3-16 (allow spaces)
+            const nameInput = document.getElementById("name");
+            const name = nameInput.value.trim();
+            const regexName = /^[A-Z][a-z\s]{2,15}$/;
+
+            if(!regexName.test(name)){
+                nameInput.style.color = "red";
+            } else {
+                nameInput.style.color = "green";
+            }
+            //Validate email
+            const emailInput = document.getElementById("email");
+            const email = emailInput.value.trim();
+            const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if(!regexEmail.test(email)){
+                emailInput.style.color = "red";
+            } else {
+                emailInput.style.color = "green";
+            }
+
+            // phone: 10 digits starting with 6-9
+            const phInput = document.getElementById("phno");
+            const ph = phInput.value.trim();
+            const regexPh = /^[6-9][0-9]{9}$/;
+
+            if(!regexPh.test(ph)){
+                phInput.style.color = "red";
+            } else {
+                phInput.style.color = "green";
+            }
+
+            // return overall validity to control form submit
+            return regexName.test(name) && regexPh.test(ph);
+        }
+    </script>
+</body>
+</html>
