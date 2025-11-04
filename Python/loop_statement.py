@@ -75,3 +75,12 @@ for mark in marks:
     if mark < 30:
         failed_count += 1
 print("Number of students failed:", failed_count)
+
+#print prime numbers between 1 to 50
+for num in range(1, 51):
+    if num > 1:
+        for i in range(2, int(num/2)+1):
+            if (num % i) == 0:
+                break
+        else:
+            print(num)
