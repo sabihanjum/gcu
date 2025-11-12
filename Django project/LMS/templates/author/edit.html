@@ -1,0 +1,14 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Edit Author</title></head>
+<body>
+  <h1>Edit Author</h1>
+  <form method="post">{% csrf_token %}
+    <p><label>Name: <input name="AuthorName" value="{{ author.AuthorName }}" required></label></p>
+    <p><label>Age: <input name="AuthorAge" type="number" value="{{ author.AuthorAge }}"></label></p>
+    <p><label>Phone: <input name="AuthorPhone" value="{{ author.AuthorPhone }}"></label></p>
+    <p><label>Email: <input name="AuthorEmail" type="email" value="{{ author.AuthorEmail }}"></label></p>
+    <button type="submit">Update</button>
+  </form>
+  <p><a href="{% url 'author:list' %}">Back</a></p>
+</body>
+</html>
