@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Add student</title>
+</head>
+<body>
+  <h1>Add student page</h1>
+
+  {% if form_errors %}
+    <ul style="color:red;">
+      {% for field, errs in form_errors.items %}
+        {% for e in errs %}
+          <li>{{ field }}: {{ e }}</li>
+        {% endfor %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <form method="post" action="{% url 'addstudent' %}">
+    {% csrf_token %}
+    {{ sform.as_p }}
+    <button type="submit">Add Student</button>
+  </form>
+
+  <p><a href="{% url 'home' %}">Back</a></p>
+</body>
+</html>
