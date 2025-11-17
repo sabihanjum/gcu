@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Generator</title>
+</head>
+<body>
+    <h1>Text Generation with Hugging Face</h1>
+    <form method="post">
+        {% csrf_token %}
+        <textarea name="prompt" rows="4" cols="50" placeholder="Enter your prompt here..."></textarea><br>
+        <button type="submit">Generate</button>
+    </form>
+
+    {% if generated_text %}
+        <h2>Generated Text:</h2>
+        <p>{{ generated_text }}</p>
+    {% endif %}
+</body>
+</html>

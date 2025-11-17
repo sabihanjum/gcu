@@ -8,9 +8,10 @@ class BlogSerializer(serializers.ModelSerializer):
     updated_at = serializers.DateTimeField(read_only=True)
     published = serializers.SerializerMethodField(read_only=True)
 
+    
     class Meta:
         model = Blog
-        fields = ['id', 'title', 'content', 'created_at', 'updated_at', 'published']
+        fields = ['id', 'title', 'description', 'published_date']
 
     def get_published(self, obj):
         val = getattr(obj, 'published', None)
